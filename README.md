@@ -123,7 +123,7 @@ OpenCV의 Edge Detection과 Hough Transform을 활용해
 
 `Python` `OpenCV` `Computer Vision`
 
-현재 MVP를 단계적으로 개발하고 있습니다.
+> 현재 MVP를 단계적으로 개발하고 있습니다.
 
 ---
 
