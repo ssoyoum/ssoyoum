@@ -141,6 +141,15 @@ User-facing AI Service
 
 [GitHub](https://github.com/ssoyoum)
 
+<a href="https://www.gitanimals.org/en-US?utm_medium=image&utm_source=ssoyoum&utm_content=line">
+  <img
+    src="https://render.gitanimals.org/lines/ssoyoum"
+    width="100"
+    height="100"
+  />
+</a>
+  
+
 
 
 <a href="https://www.gitanimals.org/en-US?utm_medium=image&utm_source=ssoyoum&utm_content=farm">
