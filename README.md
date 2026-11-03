@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0ea5e9,100:0f766e&height=180&section=header&text=박소영%20|%20AI%20%26%20Spatial%20Data%20Developer&fontSize=30&fontColor=ffffff&fontAlignY=38&desc=수자원·공간정보%20실무%20→%20GIS%20서비스%20·%20AI%20Agent&descSize=16&descAlignY=58" width="100%" alt="박소영 | AI & Spatial Data Developer" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0ea5e9,100:0f766e&height=180&section=header&text=%EB%B0%95%EC%86%8C%EC%98%81%20%7C%20AI%20%26%20Spatial%20Data%20Developer&fontSize=30&fontColor=ffffff&fontAlignY=38&desc=%EC%88%98%EC%9E%90%EC%9B%90%C2%B7%EA%B3%B5%EA%B0%84%EC%A0%95%EB%B3%B4%20%EC%8B%A4%EB%AC%B4%20%E2%86%92%20GIS%20%EC%84%9C%EB%B9%84%EC%8A%A4%20%C2%B7%20AI%20Agent&descSize=16&descAlignY=58" width="100%" alt="박소영 | AI & Spatial Data Developer" />
 </p>
 
 <p align="center">
