@@ -11,6 +11,7 @@
   <img src="https://img.shields.io/badge/🏆_국토교통부_공간정보_활용_사례_분야-진흥원장상-f59e0b?style=flat-square" alt="진흥원장상" />
   <img src="https://img.shields.io/badge/🌊_2026_AI·디지털_사회문제_해결_챌린지-서류_합격-0ea5e9?style=flat-square" alt="서류 합격" />
   <img src="https://img.shields.io/badge/💬_2026_모두의_AI_실험실-선정-8b5cf6?style=flat-square" alt="모두의 AI 실험실 선정" />
+  <img src="https://img.shields.io/badge/🏆_2026_AI_TOP_100-본선_진출-f59e0b?style=flat-square" alt="2026 AI TOP 100 본선 진출" />
 </p>
 
 ---
