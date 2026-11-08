@@ -9,7 +9,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/🏆_국토교통부_공간정보_활용_사례_분야-진흥원장상-f59e0b?style=flat-square" alt="진흥원장상" />
-  <img src="https://img.shields.io/badge/🌊_2026_AI·디지털_사회문제_해결_챌린지-서류_합격-0ea5e9?style=flat-square" alt="서류 합격" />
+  <img src="https://img.shields.io/badge/2026_AI·디지털_사회문제_해결_챌린지-서류_합격-0ea5e9?style=flat-square" alt="서류 합격" />
   <img src="https://img.shields.io/badge/💬_2026_모두의_AI_실험실-선정-8b5cf6?style=flat-square" alt="모두의 AI 실험실 선정" />
   <img src="https://img.shields.io/badge/🏆_2026_AI_TOP_100-본선_진출-f59e0b?style=flat-square" alt="2026 AI TOP 100 본선 진출" />
 </p>
@@ -21,7 +21,7 @@
 | | |
 |---|---|
 | 🎓 **전공** | 건설시스템공학 + 환경공학 |
-| 🌊 **실무** | 수자원·공간정보 실무 약 4년 (홍수위험지도·하천 설계 자료) |
+| 💼 **실무** | 수자원·공간정보 실무 약 4년 (홍수위험지도·하천 설계 자료) |
 | 🗺️ **GIS** | 기관·좌표계가 다른 공공데이터를 건물·시설 단위로 묶는 데이터 처리와 WebGIS |
 | 🤖 **AI** | FastAPI 기반 AI 서비스 · LLM이 고르고 서버가 확인하는 Agent 도구 실행 |
 
@@ -65,7 +65,13 @@ flowchart LR
 
 ---
 
-### 2. 🌊 만약에 침수
+### 2. FloodOps
+
+<a href="https://floodops.duckdns.org"><img src="https://raw.githubusercontent.com/ssoyoum/Flood-Disaster-Digital-Twin/main/docs/screenshots/hero.gif" alt="사건 단계가 진행되며 침수 추정 셀이 번지는 사례 재생" width="100%" /></a>
+
+**홍수 대응 의사결정 서비스** — 수위·강우·특보를 지하차도·하천변 시설의 위험 단계로 바꿔 «어디를 먼저 막을지» 고르게 돕고, 같은 판정 규칙을 2023 오송 지하차도 등 과거 사건에 다시 돌려 채점합니다. (팀 «만약에, 침수»)
+
+#### 실시간 판정과 Agent
 
 <table>
   <tr>
@@ -74,21 +80,27 @@ flowchart LR
   </tr>
 </table>
 
-**AI 기반 침수 대응 서비스** — 수위·강우·특보를 지하차도·하천변 시설의 위험 단계로 바꿔 «어디를 먼저 막을지» 고르게 돕습니다.
-
 ```mermaid
 flowchart LR
-  Q["👤 질문"] --> L["🤖 Gemini<br/>도구 선택"]
-  L --> V{"🛡️ 서버 확인<br/>도구명 · 입력값"}
-  V -- 통과 --> T["🔧 읽기 전용 도구 실행"]
-  V -- 거절 --> N["📋 필요한 자료와 한계 안내"]
-  T --> R["💬 근거와 함께 답변"]
+  Q["질문"] --> L["Gemini<br/>도구 선택"]
+  L --> V{"서버 확인<br/>도구명 · 입력값"}
+  V -- 통과 --> T["읽기 전용 도구 실행"]
+  V -- 거절 --> N["필요한 자료와 한계 안내"]
+  T --> R["근거와 함께 답변"]
 ```
 
 - **FastAPI 기반 Agent 도구 구현** — 등록된 읽기 전용 도구만 실행
 - **Gemini API 연동** — SDK 없이 직접 호출, 답의 숫자가 도구 결과와 다르면 서버가 바로잡음
 - **도구 실행 검증 및 테스트** — 43문항 고정 평가 **43/43**, 근거 없는 주장 **0건**, 토큰 **−21%**
 - 600 MB 컨테이너의 메모리 부족 원인을 찾아 **663 → 506 MiB**
+
+#### 사례 재생과 백테스트
+
+- **공간정보 및 수자원 도메인 적용** — 지형(HAND) 기반 침수 범위 근사, 계획홍수위·상승 속도로 통제 검토 시점 계산
+- **API 기반 데이터 처리** — 홍수통제소·기상청 관측 자료로 오송·서울·포항·안동 **4개 사례** 재구성
+- **서비스 기능 구현** — 궁평2 지하차도 규칙 백테스트에서 유입 **157분 전** 첫 검토, 늦었던 사례도 표에 그대로 남김
+
+> HAND 침수 범위는 임시 근사이며 공식 침수범위나 수리해석 결과가 아닙니다. 백테스트는 실시간 경보 성능이 아닙니다.
 
 <p>
   <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" />
@@ -98,23 +110,7 @@ flowchart LR
   <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white" />
 </p>
 
-[📂 Repository](https://github.com/ssoyoum/Flood-Disaster-Digital-Twin) | [🌐 Demo](https://floodops.duckdns.org) | [🧩 Architecture](https://github.com/ssoyoum/Flood-Disaster-Digital-Twin/blob/main/docs/ARCHITECTURE.md)
-
----
-
-### 3. 🛰️ FloodOps / HAND Osong
-
-<a href="https://floodops.duckdns.org"><img src="https://raw.githubusercontent.com/ssoyoum/Flood-Disaster-Digital-Twin/main/docs/screenshots/hero.gif" alt="사건 단계가 진행되며 침수 추정 셀이 번지는 사례 재생" width="100%" /></a>
-
-**수자원·침수 분석 서비스** — 2023 오송 지하차도 등 과거 홍수 사례를 관측 자료로 단계별로 다시 재생하고, 같은 판정 규칙을 실제 통제 시각에 채점합니다. (‘만약에 침수’ 레포의 사례 재생 기능)
-
-- **공간정보 및 수자원 도메인 적용** — 지형(HAND) 기반 침수 범위 근사, 계획홍수위·상승 속도로 통제 검토 시점 계산
-- **API 기반 데이터 처리** — 홍수통제소·기상청 관측 자료로 오송·서울·포항·안동 **4개 사례** 재구성
-- **서비스 기능 구현** — 궁평2 지하차도 규칙 백테스트에서 유입 **157분 전** 첫 검토, 늦었던 사례도 표에 그대로 남김
-
-> HAND 침수 범위는 임시 근사이며 공식 침수범위나 수리해석 결과가 아닙니다. 백테스트는 실시간 경보 성능이 아닙니다.
-
-[📂 Repository](https://github.com/ssoyoum/Flood-Disaster-Digital-Twin) | [🌐 Demo](https://floodops.duckdns.org) | [🧩 Architecture](https://github.com/ssoyoum/Flood-Disaster-Digital-Twin/blob/main/docs/CASE_REPLAY.md)
+[📂 Repository](https://github.com/ssoyoum/Flood-Disaster-Digital-Twin) | [🌐 Demo](https://floodops.duckdns.org) | [🧩 Architecture](https://github.com/ssoyoum/Flood-Disaster-Digital-Twin/blob/main/docs/ARCHITECTURE.md) | [🔁 Case Replay](https://github.com/ssoyoum/Flood-Disaster-Digital-Twin/blob/main/docs/CASE_REPLAY.md)
 
 ---
 
