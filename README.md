@@ -118,7 +118,7 @@ flowchart LR
 
 | Project | 한 줄 |
 |---|---|
-| 🔥 [철든신입](https://github.com/steel-rookie/ST-ROOKIE) (팀) | 철강 신입사원 학습 서비스. 담당: JWT 로그인 API, 출처 재확인 학습 튜터, Langfuse trace |
+| 🔥 [철든신입](https://github.com/ssoyoum/ST-ROOKIE) (팀) | 철강 신입사원 학습 서비스. 담당: JWT 로그인 API, 출처 재확인 학습 튜터, Langfuse trace |
 | 🗺️ [의성 유휴자원 정책검토](https://github.com/ssoyoum/Uiseong-Resource-Model) | 전통수리시설 '못' 427개 × 생활권 인구, 현장검토 양식 116개 |
 | 💬 [통해](https://github.com/ssoyoum/tonghae) (팀) | 이주노동자 생활 대화 도우미. 앱스토어 리뷰 3,889건 분석으로 기획 · [Demo](https://ssoyoum.github.io/tonghae/) |
 
